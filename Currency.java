@@ -28,7 +28,8 @@ public class Currency {
                     "CAD",
                     "INR",
                     "BDT",
-                    "JPY"};
+                    "JPY"
+                    "USD"};
     public static final double [] us_1_unit =
             {0.69881,
                     0.61095,
@@ -36,7 +37,8 @@ public class Currency {
                     0.96680,
                     44.72,
                     73.14,
-                    80.55};
+                    80.55,
+                    1.0};
 
     public static int getTotalCountries()
     {
