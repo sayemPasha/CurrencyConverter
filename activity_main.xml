@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.currencyconverter.MainActivity">
+
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="From:"
+        android:textSize = "20sp"
+        />
+
+    <Spinner
+        android:id="@+id/fromSpinner"
+        android:layout_below="@+id/textview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        />
+
+    <EditText
+
+        android:id = "@+id/edittext"
+        android:layout_below="@+id/fromSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint = "Enter number"
+
+        />
+
+    <TextView
+        android:id="@+id/toLabel"
+        android:layout_below="@+id/edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To:"
+        android:textSize = "20sp"
+        />
+
+    <Spinner
+        android:id="@+id/toSpinner"
+        android:layout_below="@+id/toLabel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        />
+
+
+    <!-- NOTE: if layout_width = match parent is used, then button is stretched to both end-->
+    <!-- which doesn't look good-->
+
+    <LinearLayout
+        android:id="@+id/btnGroup"
+        android:layout_below="@+id/toSpinner"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:id="@+id/clear"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="Clear"
+            android:textSize="10sp"
+            android:onClick = "clearClick"
+
+            />
+
+        <Button
+            android:id="@+id/convert"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:onClick="convertClick"
+            android:text="CONTVERT"
+            android:textSize="10sp"
+
+            />
+
+        <Button
+            android:id="@+id/swap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="Swap"
+            android:textSize="10sp"
+            android:onClick = "swapClick"
+            />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/resultLabel"
+        android:layout_below="@+id/btnGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Result:"
+        android:textSize = "20sp"
+        />
+
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_below="@+id/resultLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize = "20sp"
+        />
+
+
+</RelativeLayout>
